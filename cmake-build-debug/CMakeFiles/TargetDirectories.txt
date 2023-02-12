@@ -1,0 +1,3 @@
+/home/jekyt/PracticeCPP/cmake-build-debug/CMakeFiles/PracticeCPP.dir
+/home/jekyt/PracticeCPP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jekyt/PracticeCPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
