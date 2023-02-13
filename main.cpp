@@ -3,7 +3,11 @@
 #include <limits>
 #include <algorithm>
 #include <vector>
+#include <utility>
 
+bool comparePairs(const std::pair<int, int> &a, const std::pair<int, int> &b) {
+    return a.first < b.first;
+}
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -50,6 +54,24 @@ int main() {
     std::cout << std::endl;
 
 
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+
+    std::cout << "Enter a sequence of pairs of numbers: ";
+    std::vector<std::pair<int, int>> pairs;
+    int a, b;
+    while (std::cin >> a >> b) {
+        pairs.push_back({a, b});
+    }
+
+    std::sort(pairs.begin(), pairs.end(), comparePairs);
+    std::cout << "The sorted pairs are: " << std::endl;
+    for(const auto &p : pairs){
+        std::cout << "(" << p.first << ", " << p.second << ")" << std::endl;
+    }
 
     return 0;
 }
+
+
