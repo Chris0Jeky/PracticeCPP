@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <utility>
+#include <map>
 
 bool comparePairs(const std::pair<int, int> &a, const std::pair<int, int> &b) {
     return a.first < b.first;
@@ -61,15 +62,43 @@ int main() {
     std::cout << "Enter a sequence of pairs of numbers: ";
     std::vector<std::pair<int, int>> pairs;
     int a, b;
-    while (std::cin >> a >> b) {
-        pairs.push_back({a, b});
-    }
+    //while (std::cin >> a >> b) {
+    //    pairs.push_back({a, b});
+    //}
+
+    // loop above to be substituted with below:
+    //for (int i = 0; i < 10000; ++i) {
+    //        std::cin >> x;
+    //        if (x != 0){
+    //            numbers.push_back(x);
+    //        } else {
+    //            i = 10000;
+    //        }
+    //    }
 
     std::sort(pairs.begin(), pairs.end(), comparePairs);
     std::cout << "The sorted pairs are: " << std::endl;
     for(const auto &p : pairs){
         std::cout << "(" << p.first << ", " << p.second << ")" << std::endl;
     }
+
+
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "Enter a sequence of words: ";
+    std::map<std::string, int> frequency;
+    std::string word;
+    while (std::cin >> word) {
+        ++frequency[word];
+    }
+
+    std::cout << "The frequency of each word is: " << std::endl;
+
+    for(const auto &pair : frequency) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+
 
     return 0;
 }
