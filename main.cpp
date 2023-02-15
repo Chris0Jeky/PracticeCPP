@@ -5,6 +5,7 @@
 #include <vector>
 #include <utility>
 #include <map>
+#include <set>
 
 bool comparePairs(const std::pair<int, int> &a, const std::pair<int, int> &b) {
     return a.first < b.first;
@@ -100,6 +101,20 @@ int main() {
     }
 
 
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "Enter a sequence of numbers: ";
+    std::set<int> numbers2;
+    int n;
+    while (std::cin >> n) {
+        numbers2.insert(n);
+    }
+
+    std::cout << "The unique elements are: " << std::endl;
+    for (const auto &number : numbers) {
+        std::cout << number << std::endl;
+    }
     return 0;
 }
 
