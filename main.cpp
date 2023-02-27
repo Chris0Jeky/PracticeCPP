@@ -7,6 +7,7 @@
 #include <map>
 #include <set>
 
+
 bool comparePairs(const std::pair<int, int> &a, const std::pair<int, int> &b) {
     return a.first < b.first;
 }
@@ -115,6 +116,21 @@ int main() {
     for (const auto &number : numbers) {
         std::cout << number << std::endl;
     }
+
+
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "Enter a sequence of numbers: ";
+    std::vector<int> numbers3;
+    int numa;
+    while (std::cin >> n) {
+        numbers.push_back(n);
+    }
+
+    auto min = *std::min_element(numbers.begin(), numbers.end());
+    auto max = *std::max_element(numbers.begin(), numbers.end());
+
     return 0;
 }
 
