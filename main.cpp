@@ -6,6 +6,7 @@
 #include <utility>
 #include <map>
 #include <set>
+#include <cmath>
 
 
 bool comparePairs(const std::pair<int, int> &a, const std::pair<int, int> &b) {
@@ -130,6 +131,18 @@ int main() {
 
     auto min = *std::min_element(numbers.begin(), numbers.end());
     auto max = *std::max_element(numbers.begin(), numbers.end());
+
+    std::cout << "The minimum Value is: " << min << std::endl;
+    std::cout << "The maximum value is: " << max << std::endl;
+
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+
+
+
+
+
 
     return 0;
 }
