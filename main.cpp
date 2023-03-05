@@ -139,10 +139,17 @@ int main() {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 
+    std::cout << "Enter a number: ";
+    int n_Math;
+    std::cin >> n_Math;
 
+    auto square_root = sqrt(n_Math);
+    auto square = pow(n_Math, 2);
+    auto absolute_value = abs(n_Math);
 
-
-
+    std::cout << "The square root of " << n_Math << " is " << square_root << std::endl;
+    std::cout << "The square of " << n_Math << " is " << square << std::endl;
+    std::cout << "The absolute value of " << n_Math << " is " << absolute_value << std::endl;
 
     return 0;
 }
